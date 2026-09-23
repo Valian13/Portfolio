@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matthew Choy</title>
+<meta name="description" content="Matthew Choy — mechatronics engineering at the University of Waterloo. CNC machines, robots, and the firmware in between.">
+<meta name="author" content="Matthew Choy">
+<meta property="og:title" content="Matthew Choy">
+<meta property="og:description" content="Mechatronics engineering at Waterloo. Currently building a 3-axis CNC machine.">
+<meta property="og:image" content="assets/cnc-build-full.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1c1b19">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=39">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><radialGradient id='g' cx='.35' cy='.3' r='.75'><stop offset='0' stop-color='%23fff'/><stop offset='.5' stop-color='%23888'/><stop offset='1' stop-color='%23111'/></radialGradient></defs><circle cx='16' cy='16' r='13' fill='url(%23g)'/></svg>">
+</head>
+
+<body>
+<svg class="gesture" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <ellipse class="g-acc" cx="730" cy="250" rx="262" ry="238"/>
+  <ellipse cx="736" cy="246" rx="250" ry="246" transform="rotate(-4 736 246)"/>
+  <path d="M60 960 L980 70"/>
+  <path d="M0 610 C 300 580, 640 560, 1000 530"/>
+  <path d="M290 0 C 320 300, 250 700, 340 1000"/>
+  <ellipse cx="210" cy="820" rx="150" ry="120" transform="rotate(12 210 820)"/>
+</svg>
+
+<!-- ============================================================ TOP NAV -->
+<header class="topnav">
+  <div class="topnav__in">
+    <a class="topnav__name" href="index.html"><span class="it">Matthew</span> Choy</a>
+    <nav class="topnav__links" aria-label="Pages">
+      <a href="index.html" aria-current="page">home</a>
+      <a href="projects.html">projects</a>
+      <a href="coops.html">co-ops</a>
+      <a href="about.html">about</a>
+      <a class="btn btn--ink" href="resume.pdf" target="_blank" rel="noopener">resume</a>
+    </nav>
+  </div>
+</header>
+
+<main class="book">
+
+  <!-- ============================================================= HEADER -->
+  <header class="sheet sign">
+    <span class="tape" aria-hidden="true"></span>
+
+
+    <a class="photo photo--me" href="assets/matthew.jpg?v=2" data-lb="me">
+      <img src="assets/matthew.jpg?v=2" alt="Matthew Choy">
+      <span class="cap">me, 2026</span>
+    </a>
+
+    <div class="sign__txt">
+      <p class="pencil">mechatronics @ uwaterloo</p>
+      <h1><span class="it">Matthew</span><br>Choy</h1>
+      <svg class="stroke" viewBox="0 0 300 26" aria-hidden="true"><path class="s1" d="M4 17 C 60 7, 118 21, 178 11 S 262 6, 296 14"/><path class="s2" d="M14 21 C 80 13, 150 22, 214 15 S 276 12, 292 18"/></svg>
+      <p class="hi">Hi!</p>
+      <p class="sign__sub">I'm interested in <b>robotics</b> and <b>CAD</b>, designing
+         things, and figuring out how stuff works.</p>
+      <p class="sign__sub">When I'm not doing that, I'm usually swimming, at the gym,
+         reading, or watching TV shows and anime.</p>
+      <div class="btns">
+        <a class="btn btn--ink" href="mailto:mchoy@uwaterloo.ca">email</a>
+        <a class="btn" href="https://github.com/emiyae" target="_blank" rel="noopener">github</a>
+        <a class="btn" href="https://linkedin.com/in/matthewwychoy" target="_blank" rel="noopener">linkedin</a>
+        <a class="btn btn--ink" href="resume.pdf" target="_blank" rel="noopener">resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================= PAGE BUTTONS -->
+  <nav class="tiles" aria-label="Pages">
+    <a class="tile tile--1" href="projects.html">
+      <span class="tile__top"><span class="tile__no">01</span><span class="tile__arrow" aria-hidden="true">→</span></span>
+      <span><span class="tile__title">Projects</span><span class="tile__sub">since 2022</span></span>
+    </a>
+    <a class="tile tile--2" href="coops.html">
+      <span class="tile__top"><span class="tile__no">02</span><span class="tile__arrow" aria-hidden="true">→</span></span>
+      <span><span class="tile__title">Co-ops</span><span class="tile__sub">Lineside · Taymer</span></span>
+    </a>
+    <a class="tile tile--3" href="about.html">
+      <span class="tile__top"><span class="tile__no">03</span><span class="tile__arrow" aria-hidden="true">→</span></span>
+      <span><span class="tile__title">About Me</span><span class="tile__sub">background and hobbies</span></span>
+    </a>
+    <a class="tile tile--4" href="#cnc">
+      <span class="tile__top"><span class="tile__no">04</span><span class="tile__arrow tile__arrow--down" aria-hidden="true">↓</span></span>
+      <span><span class="tile__title">CNC Machine</span><span class="tile__sub" aria-hidden="true">&nbsp;</span></span>
+    </a>
+  </nav>
+
+  <!-- ============================================================ UPDATES -->
+  <section id="updates">
+    <h2 class="sec-h">Updates</h2>
+    <div class="idxs">
+      <div class="idx">
+        <span class="idx__when">sep '26</span>
+        <p>Signed on with Lineside Industrial Automation for a fall co-op as a control
+           systems designer.</p>
+      </div>
+      <div class="idx">
+        <span class="idx__when">aug '26</span>
+        <p>Finished my 1B term of mechatronics engineering.</p>
+      </div>
+      <div class="idx">
+        <span class="idx__when">jul '26</span>
+        <p>The CNC moves. Now chasing accuracy — mostly backlash, coupler alignment,
+           and the tolerances on my printed parts.</p>
+      </div>
+      <div class="idx">
+        <span class="idx__when">apr '26</span>
+        <p>Wrapped up my machine vision co-op at Taymer International.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ CNC -->
+  <section class="sheet sheet--grid" id="cnc">
+    <span class="tape tape--l" aria-hidden="true"></span>
+    <span class="tape tape--r" aria-hidden="true"></span>
+
+    <div class="cnc__head">
+      <h2 class="sec-h">The CNC Machine</h2>
+      <span class="stripes"><span>in progress</span></span>
+    </div>
+
+    <div class="cols">
+      <div>
+        <p>A compact 3-axis mill I designed and built from scratch. This project used
+           2040 and 2060 aluminium extrusion, MGN9H linear rails, lead screw drive with
+           anti-backlash nuts, four NEMA 17 steppers, and GRBL running on an Arduino Uno.
+           Every bracket and carriage on it is a part I designed in SolidWorks and printed.</p>
+        <p>The hardest part isn't getting it to move, it's getting it to move to the same
+           place twice with high precision. Most of that work has gone into anti-backlash
+           nuts, bearing support and coupler alignment, plus a lot of re-printing brackets
+           that were a fraction out.</p>
+      </div>
+      <div>
+        <p>On the electrical side I wired and configured the stepper drivers, calibrated
+           steps/mm on each axis, and tuned acceleration and feed rates until the motion
+           was smooth instead of skipping steps.</p>
+        <p>I designed the printed parts around what I could actually make. This means
+           practicing DFMA via sensible tolerances, geometry that prints without supports,
+           and an assembly order I wouldn't regret halfway through.</p>
+      </div>
+    </div>
+
+    <a class="photo photo--lead" href="assets/cnc-build-now.jpg" data-lb="the machine as it stands now">
+      <img src="assets/cnc-build-now.jpg" alt="The CNC machine, fully assembled" loading="lazy">
+      <span class="cap">the machine now</span></a>
+
+    <div class="photo-grid">
+      <a class="photo" href="assets/cnc-build-full.jpg" data-lb="the machine, assembled">
+        <img src="assets/cnc-build-full.jpg" alt="The assembled CNC machine" loading="lazy">
+        <span class="cap">assembled</span></a>
+      <a class="photo" href="assets/cnc-cad-assembly.jpg" data-lb="SolidWorks assembly">
+        <img src="assets/cnc-cad-assembly.jpg" alt="SolidWorks assembly" loading="lazy">
+        <span class="cap">the plan</span></a>
+      <a class="photo" href="assets/cnc-leadscrew-detail.jpg" data-lb="lead screw, brass nut and MGN9H rail">
+        <img src="assets/cnc-leadscrew-detail.jpg" alt="Lead screw and linear rail" loading="lazy">
+        <span class="cap">lead screw + rail</span></a>
+      <a class="photo" href="assets/cnc-build-frame.jpg" data-lb="frame and Y-axis rails">
+        <img src="assets/cnc-build-frame.jpg" alt="Frame with Y-axis rails" loading="lazy">
+        <span class="cap">frame first</span></a>
+      <a class="photo" href="assets/cnc-cad-gusset.jpg" data-lb="one of the printed brackets">
+        <img src="assets/cnc-cad-gusset.jpg" alt="CAD of a printed gusset" loading="lazy">
+        <span class="cap">printed bracket</span></a>
+      <a class="photo" href="assets/cnc-cad-motor.jpg" data-lb="NEMA 17 mount and coupler">
+        <img src="assets/cnc-cad-motor.jpg" alt="CAD of the stepper mount" loading="lazy">
+        <span class="cap">motor mount</span></a>
+    </div>
+  </section>
+
+  <!-- ============================================================= SKILLS -->
+  <section class="sheet" id="skills">
+    <span class="tape" aria-hidden="true"></span>
+    <h2 class="sec-h">Skills</h2>
+
+    <div class="skrow skrow--1">
+      <p class="skrow__k">CAD &amp; Design</p>
+      <div class="chips">
+        <span>SolidWorks</span><span>Fusion 360</span><span>AutoCAD</span>
+        <span>Drafting</span><span>GD&amp;T</span><span>DFMA</span>
+      </div>
+    </div>
+    <div class="skrow skrow--2">
+      <p class="skrow__k">Electrical</p>
+      <div class="chips">
+        <span>Electrical Design</span><span>Motor Control</span><span>Soldering</span>
+        <span>Circuits</span><span>Stepper Drivers</span><span>RC Systems</span>
+      </div>
+    </div>
+    <div class="skrow skrow--3">
+      <p class="skrow__k">Making</p>
+      <div class="chips">
+        <span>Machining</span><span>3D Printing</span><span>Laser Cutting</span>
+        <span>Soldering</span><span>Assembly</span>
+      </div>
+    </div>
+    <div class="skrow skrow--4">
+      <p class="skrow__k">Software</p>
+      <div class="chips">
+        <span>C++</span><span>Python</span><span>Java</span>
+        <span>GRBL</span><span>Arduino</span><span>G-code</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== CONTROLS -->
+  <section class="sheet sheet--toned" id="controls">
+    <span class="tape" aria-hidden="true"></span>
+    <h2 class="sec-h">Controls &amp; Automation</h2>
+    <p>What I worked with as a control systems designer at
+       <b>Lineside Industrial Automation</b>.</p>
+    <div class="chips chips--lone">
+      <span>PLC Programming</span><span>HMI Development</span><span>Ladder Logic</span>
+      <span>VFDs &amp; Drives</span><span>Sensors &amp; I/O</span>
+    </div>
+  </section>
+
+  <!-- ============================================================= VISION -->
+  <section class="sheet sheet--toned" id="vision">
+    <span class="tape" aria-hidden="true"></span>
+    <h2 class="sec-h">Machine Vision</h2>
+    <p>What I worked with last winter as a machine vision co-op at
+       <b>Taymer International</b>.</p>
+    <div class="chips chips--lone">
+      <span>Image Processing</span><span>Lighting Design</span>
+      <span>Inspection Systems</span><span>Validation Testing</span>
+      <span>Assembly</span><span>C++</span>
+    </div>
+  </section>
+
+  <!-- ============================================================= FOOTER -->
+  <footer class="signoff">
+    <div class="idx idx--footer">
+      <span class="idx__when">thanks for stopping by</span>
+      <p><a href="mailto:mchoy@uwaterloo.ca">mchoy@uwaterloo.ca</a></p>
+      <p><a href="tel:+14163719828">416-371-9828</a></p>
+    </div>
+    <p class="fine">Toronto, ON</p>
+  </footer>
+
+</main>
+
+<div class="lb" id="lb" hidden>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</div>
+
+<script src="main.js?v=39"></script>
+</body>
+</html>

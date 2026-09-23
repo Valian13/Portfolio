@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Matthew Choy</title>
+<meta name="description" content="Projects by Matthew Choy — a VEX SLAM rover, an RC airplane, competition robots and a mechanical coin sorter.">
+<meta name="author" content="Matthew Choy">
+<meta property="og:title" content="Projects — Matthew Choy">
+<meta property="og:image" content="assets/rover-build.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1c1b19">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=39">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><radialGradient id='g' cx='.35' cy='.3' r='.75'><stop offset='0' stop-color='%23fff'/><stop offset='.5' stop-color='%23888'/><stop offset='1' stop-color='%23111'/></radialGradient></defs><circle cx='16' cy='16' r='13' fill='url(%23g)'/></svg>">
+</head>
+
+<body>
+<svg class="gesture" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <ellipse class="g-acc" cx="780" cy="180" rx="220" ry="200"/>
+  <ellipse cx="786" cy="176" rx="208" ry="210" transform="rotate(-6 786 176)"/>
+  <path d="M0 360 C 300 330, 660 310, 1000 290"/>
+  <path d="M120 0 C 160 320, 90 700, 180 1000"/>
+  <ellipse cx="560" cy="860" rx="170" ry="130" transform="rotate(8 560 860)"/>
+</svg>
+
+<!-- ============================================================ TOP NAV -->
+<header class="topnav">
+  <div class="topnav__in">
+    <a class="topnav__name" href="index.html"><span class="it">Matthew</span> Choy</a>
+    <nav class="topnav__links" aria-label="Pages">
+      <a href="index.html">home</a>
+      <a href="projects.html" aria-current="page">projects</a>
+      <a href="coops.html">co-ops</a>
+      <a href="about.html">about</a>
+      <a class="btn btn--ink" href="resume.pdf" target="_blank" rel="noopener">resume</a>
+    </nav>
+  </div>
+</header>
+
+<main class="book">
+
+  <!-- ========================================================== PAGE HEAD -->
+  <div class="page-head">
+    <p class="pencil">01 · projects</p>
+    <h1 class="page-title"><span class="it">Previous</span> Projects</h1>
+    <svg class="stroke" viewBox="0 0 300 26" aria-hidden="true"><path class="s1" d="M4 17 C 60 7, 118 21, 178 11 S 262 6, 296 14"/><path class="s2" d="M14 21 C 80 13, 150 22, 214 15 S 276 12, 292 18"/></svg>
+    <p class="page-lede">Robots and mechanisms I've built since 2022. Most have a full
+       engineering report linked if you want the details. The CNC machine I'm building
+       now is on the <a href="index.html#cnc">home page</a>.</p>
+  </div>
+
+  <!-- =========================================================== PROJECTS -->
+  <section id="projects" aria-label="Projects">
+    <div class="proj-grid">
+
+      <article class="sheet proj tilt-l" id="rover">
+        <span class="tape" aria-hidden="true"></span>
+        <h2 class="proj__h">VEX SLAM Rover</h2>
+        <p class="meta">oct — dec '25 · MTE 121 · with a partner · C++</p>
+        <p>Scoped as a Mars exploration rover: drive into an unknown space, look around,
+           and come back with a map. A distance sensor on a rotating platform takes a 360°
+           scan, and the readings become a 128×128 occupancy grid drawn live on the VEX
+           Brain's screen.</p>
+        <p>Position comes from the motor encoders and an inertial sensor, so the robot
+           always knows its x and y relative to where it started — without that, a scan
+           is just a pile of distances with nothing to anchor them to.</p>
+        <p>I designed the cable-driven telescopic slider that raises the sensor, so it
+           can scan at two heights and catch obstacles a single sweep would miss.</p>
+        <p class="links">
+          <a href="https://drive.google.com/file/d/1d2-3MdF99NJuwbugCJHmPAH8A4QmOFqb/view" target="_blank" rel="noopener">report</a>
+          <a href="https://github.com/dbyun1120/MTE-121-VEX-ROVER-PROJECT" target="_blank" rel="noopener">code</a>
+          <a href="https://drive.google.com/drive/folders/1uRug4hbI19VGy6pP-b8p6wY-o9qBWWTe" target="_blank" rel="noopener">photos</a>
+        </p>
+        <div class="photo-row">
+          <a class="photo" href="assets/rover-build.jpg" data-lb="the rover">
+            <img src="assets/rover-build.jpg" alt="VEX mapping rover" loading="lazy"><span class="cap">rover</span></a>
+          <a class="photo" href="assets/rover-map.jpg" data-lb="a map drawn on the Brain">
+            <img src="assets/rover-map.jpg" alt="Map on the VEX Brain" loading="lazy"><span class="cap">the map</span></a>
+          <a class="photo" href="assets/rover-slider.jpg" data-lb="telescopic slider, extended">
+            <img src="assets/rover-slider.jpg" alt="The telescopic slider" loading="lazy"><span class="cap">slider up</span></a>
+        </div>
+      </article>
+
+      <article class="sheet proj tilt-r" id="plane">
+        <span class="tape" aria-hidden="true"></span>
+        <h2 class="proj__h">RC Airplane</h2>
+        <p class="meta">jun — aug '25 · solo · brushless · ESC · LiPo</p>
+        <p>A plane built out of cardboard around a brushless motor, ESC and LiPo pack,
+           with all the soldering done by hand.</p>
+        <p>Getting it to fly was almost entirely a centre-of-gravity problem. Nose-heavy
+           and it dives; tail-heavy and it stalls out of every turn. I moved the
+           electronics around inside the fuselage between flights — about 20 of them —
+           until it flew level and turned without dropping.</p>
+        <div class="photo-row">
+          <a class="photo" href="assets/plane-table.jpg" data-lb="the airframe">
+            <img src="assets/plane-table.jpg" alt="Cardboard RC airplane" loading="lazy"><span class="cap">cardboard</span></a>
+          <a class="photo" href="assets/plane-flight.jpg" data-lb="airborne">
+            <img src="assets/plane-flight.jpg" alt="The plane flying" loading="lazy"><span class="cap">it flies</span></a>
+          <a class="photo" href="assets/plane-front.jpg" data-lb="front view">
+            <img src="assets/plane-front.jpg" alt="Front of the plane" loading="lazy"><span class="cap">front</span></a>
+        </div>
+      </article>
+
+      <article class="sheet proj tilt-r" id="rails">
+        <span class="tape" aria-hidden="true"></span>
+        <h2 class="proj__h">Off the Rails</h2>
+        <p class="meta">mar — jun '23 · CAD · C++ · laser cutting</p>
+        <p>A competition robot that had to collect balls, pull itself onto a metal bar,
+           and traverse it to drop them into a scoring box. 90-second matches, 12 balls,
+           and it had to start inside a 12-inch cube.</p>
+        <p>The lift is a four-bar through a two-stage reduction — a 6-tooth gear into a
+           36, then a 6-tooth sprocket chained to a 12. I added two laser-cut parts of my
+           own: fingers to pick the balls up and a slider to travel along the bar.</p>
+        <p>Eight iterations are in the report. The big two: the lift started above 12
+           inches, fixed by shortening the c-channel from 20 holes to 15; and the shafts
+           were physically twisting under load, fixed by dropping the reduction from 18:1
+           to 12:1.</p>
+        <p class="links">
+          <a href="https://docs.google.com/document/d/1jb1o7XG2V8cJRfRli8fYbI5PiXXu0HcqnN88wll98NY/edit" target="_blank" rel="noopener">report</a>
+          <a href="https://drive.google.com/drive/folders/14vkinyDvOCytIhgQ4ZsrYfPz1XQ7P-KU" target="_blank" rel="noopener">photos</a>
+        </p>
+        <div class="photo-row">
+          <a class="photo" href="assets/rails-cad-annotated.jpg" data-lb="annotated CAD">
+            <img src="assets/rails-cad-annotated.jpg" alt="Robot CAD" loading="lazy"><span class="cap">CAD</span></a>
+          <a class="photo" href="assets/rails-build.jpg" data-lb="on the bar">
+            <img src="assets/rails-build.jpg" alt="Robot on the bar" loading="lazy"><span class="cap">on the bar</span></a>
+          <a class="photo" href="assets/rails-part.jpg" data-lb="a laser-cut part">
+            <img src="assets/rails-part.jpg" alt="Laser-cut part" loading="lazy"><span class="cap">laser cut</span></a>
+        </div>
+      </article>
+
+      <article class="sheet proj tilt-l" id="coin">
+        <span class="tape" aria-hidden="true"></span>
+        <h2 class="proj__h">Coin Sorter</h2>
+        <p class="meta">oct '22 — jan '23 · Fusion 360 · no electronics</p>
+        <p>Sorts pennies, nickels, quarters and loonies with nothing but geometry: coins
+           roll down a ramp whose gap widens as it goes, so each one drops through where
+           the opening first exceeds its diameter. On test day it got 18 pennies, 15
+           quarters, 10 nickels and 10 loonies dumped in at once.</p>
+        <p>Almost every problem was flow, not sorting. I narrowed the ramp so coins went
+           single file, added a beam at the entry sized for one coin, a small drop to
+           bleed off speed, tape where they stuck, and glue so it stopped walking across
+           the table. Best run: one jam, under five mis-sorted.</p>
+        <p class="links">
+          <a href="https://docs.google.com/document/d/1kRJGRont3llABzIRHwoJpoB6Kgmsg0amAQZpqQOkccg/edit" target="_blank" rel="noopener">report</a>
+          <a href="https://drive.google.com/drive/folders/1UV6z1dgTwn5L1nW1lzlJw52tdguiYakS" target="_blank" rel="noopener">photos</a>
+        </p>
+        <div class="photo-row">
+          <a class="photo" href="assets/coin-cad-annotated.jpg" data-lb="the graduated ramp">
+            <img src="assets/coin-cad-annotated.jpg" alt="Coin sorter CAD" loading="lazy"><span class="cap">the ramp</span></a>
+          <a class="photo" href="assets/coin-build.jpg" data-lb="the built sorter">
+            <img src="assets/coin-build.jpg" alt="Built coin sorter" loading="lazy"><span class="cap">built</span></a>
+          <a class="photo" href="assets/coin-dividers.jpg" data-lb="bin dividers">
+            <img src="assets/coin-dividers.jpg" alt="Bin dividers" loading="lazy"><span class="cap">dividers</span></a>
+        </div>
+      </article>
+
+      <article class="sheet proj proj--wide tilt-r" id="roboringer">
+        <span class="tape" aria-hidden="true"></span>
+        <h2 class="proj__h">RoboRinger</h2>
+        <p class="meta">mar — jun '22 · SolidWorks · C++ · fully autonomous</p>
+        <div class="proj__split">
+          <div>
+            <p>My first real robot. No driver: it had to collect four rings from the corners
+               of a 3×4 tile field and bring them to the centre, going for whichever ring's
+               light switched on.</p>
+            <p>I gave myself a limit of one motor for the collector, which forced it to be
+               passive — an L-shaped piece with two plates hanging off a shaft. Drive into a
+               ring and the plates swing up to let it in; back out and they drop and hold it.</p>
+            <p>The one-ring test surfaced nearly everything: ultrasonic thresholds, touchy
+               light sensors, rubber bands and bolt tension. The four-ring test found one new
+               problem — it reversed too far between corners.</p>
+            <p class="links">
+              <a href="https://docs.google.com/document/d/1fgphLA_HZXvE9KPOQdw9dTwOofeH73d19Lo9OPWfCr0/edit" target="_blank" rel="noopener">report</a>
+              <a href="https://drive.google.com/drive/folders/1vW2-Z7G83CQPf5Mx5Y-anQTTlI4Y9bH8" target="_blank" rel="noopener">photos</a>
+            </p>
+          </div>
+          <div class="photo-row photo-row--2">
+            <a class="photo" href="assets/roboringer-build.jpg" data-lb="RoboRinger">
+              <img src="assets/roboringer-build.jpg" alt="RoboRinger" loading="lazy"><span class="cap">roboringer</span></a>
+            <a class="photo" href="assets/roboringer-mech.jpg" data-lb="the one-way collector">
+              <img src="assets/roboringer-mech.jpg" alt="One-way collector" loading="lazy"><span class="cap">one-way trap</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= KEEP GOING -->
+  <section id="more">
+    <h2 class="sec-h">Keep Going</h2>
+    <nav class="tiles tiles--3 tiles--small" aria-label="More pages">
+    <a class="tile tile--1" href="coops.html">
+      <span class="tile__top"><span class="tile__no">02</span><span class="tile__arrow" aria-hidden="true">→</span></span>
+      <span><span class="tile__title">Co-ops</span><span class="tile__sub">Lineside · Taymer</span></span>
+    </a>
+    <a class="tile tile--2" href="about.html">
+      <span class="tile__top"><span class="tile__no">03</span><span class="tile__arrow" aria-hidden="true">→</span></span>
+      <span><span class="tile__title">About Me</span><span class="tile__sub">background and hobbies</span></span>
+    </a>
+    <a class="tile tile--3" href="index.html">
+      <span class="tile__top"><span class="tile__no">00</span><span class="tile__arrow" aria-hidden="true">←</span></span>
+      <span><span class="tile__title">Home</span><span class="tile__sub" aria-hidden="true">&nbsp;</span></span>
+    </a>
+    </nav>
+  </section>
+
+  <!-- ============================================================= FOOTER -->
+  <footer class="signoff">
+    <div class="idx idx--footer">
+      <span class="idx__when">thanks for stopping by</span>
+      <p><a href="mailto:mchoy@uwaterloo.ca">mchoy@uwaterloo.ca</a></p>
+      <p><a href="tel:+14163719828">416-371-9828</a></p>
+    </div>
+    <p class="fine">Toronto, ON</p>
+  </footer>
+
+</main>
+
+<div class="lb" id="lb" hidden>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</div>
+
+<script src="main.js?v=39"></script>
+</body>
+</html>
